@@ -1,28 +1,28 @@
 import cv2
 import torch
 
-from midas.dpt_depth import DPTDepthModel
-from midas.midas_net import MidasNet
-from midas.midas_net_custom import MidasNet_small
-from midas.transforms import Resize, NormalizeImage, PrepareForNet
+from .dpt_depth import DPTDepthModel
+from .midas_net import MidasNet
+from .midas_net_custom import MidasNet_small
+from .transforms import Resize, NormalizeImage, PrepareForNet
 
 from torchvision.transforms import Compose
 
 default_models = {
-    "dpt_beit_large_512": "weights/dpt_beit_large_512.pt",
-    "dpt_beit_large_384": "weights/dpt_beit_large_384.pt",
-    "dpt_beit_base_384": "weights/dpt_beit_base_384.pt",
-    "dpt_swin2_large_384": "weights/dpt_swin2_large_384.pt",
-    "dpt_swin2_base_384": "weights/dpt_swin2_base_384.pt",
-    "dpt_swin2_tiny_256": "weights/dpt_swin2_tiny_256.pt",
-    "dpt_swin_large_384": "weights/dpt_swin_large_384.pt",
-    "dpt_next_vit_large_384": "weights/dpt_next_vit_large_384.pt",
-    "dpt_levit_224": "weights/dpt_levit_224.pt",
-    "dpt_large_384": "weights/dpt_large_384.pt",
-    "dpt_hybrid_384": "weights/dpt_hybrid_384.pt",
-    "midas_v21_384": "weights/midas_v21_384.pt",
-    "midas_v21_small_256": "weights/midas_v21_small_256.pt",
-    "openvino_midas_v21_small_256": "weights/openvino_midas_v21_small_256.xml",
+    "dpt_beit_large_512": "MiDaS/weights/dpt_beit_large_512.pt",
+    "dpt_beit_large_384": "MiDaS/weights/dpt_beit_large_384.pt",
+    "dpt_beit_base_384": "MiDaS/weights/dpt_beit_base_384.pt",
+    "dpt_swin2_large_384": "MiDaS/weights/dpt_swin2_large_384.pt",
+    "dpt_swin2_base_384": "MiDaS/weights/dpt_swin2_base_384.pt",
+    "dpt_swin2_tiny_256": "MiDaS/weights/dpt_swin2_tiny_256.pt",
+    "dpt_swin_large_384": "MiDaS/weights/dpt_swin_large_384.pt",
+    "dpt_next_vit_large_384": "MiDaS/weights/dpt_next_vit_large_384.pt",
+    "dpt_levit_224": "MiDaS/weights/dpt_levit_224.pt",
+    "dpt_large_384": "MiDaS/weights/dpt_large_384.pt",
+    "dpt_hybrid_384": "MiDaS/weights/dpt_hybrid_384.pt",
+    "midas_v21_384": "MiDaS/weights/midas_v21_384.pt",
+    "midas_v21_small_256": "MiDaS/weights/midas_v21_small_256.pt",
+    "openvino_midas_v21_small_256": "MiDaS/weights/openvino_midas_v21_small_256.xml",
 }
 
 
